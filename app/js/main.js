@@ -17,9 +17,18 @@ $(function(){
         infinite:false,
     });
 
+    $('select').styler();
 
-
-
+    $('.btn-list').on('click', function () {
+        $('.product__item').addClass('list')
+        $('.btn-list').addClass('active')
+        $('.btn-grid').removeClass('active')
+    });
+    $('.btn-grid').on('click', function () {
+        $('.product__item').removeClass('list')
+        $('.btn-grid').addClass('active')
+        $('.btn-list').removeClass('active')
+    });
 
 
 
