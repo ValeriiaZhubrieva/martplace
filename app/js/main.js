@@ -17,15 +17,26 @@ $(function(){
         infinite:false,
     });
 
-    $('select').styler();
+    $(".js-range-slider").ionRangeSlider({
+        type: "double",
+        min: 0,
+        max: 330,
+        from: 30,
+        to: 300,
+        prefix: "$"
+    });
+
+    $('select, input[type=checkbox]').styler();
 
     $('.btn-list').on('click', function () {
-        $('.product__item').addClass('list')
+        $('.product__items-list').addClass('list')
+        $('.product-page__items').addClass('grid')
         $('.btn-list').addClass('active')
         $('.btn-grid').removeClass('active')
     });
     $('.btn-grid').on('click', function () {
-        $('.product__item').removeClass('list')
+        $('.product__items-list').removeClass('list')
+        $('.product-page__items').removeClass('grid')
         $('.btn-grid').addClass('active')
         $('.btn-list').removeClass('active')
     });
