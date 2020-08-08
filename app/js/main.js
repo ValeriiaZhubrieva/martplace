@@ -29,14 +29,12 @@ $(function(){
     $('select, input[type=checkbox]').styler();
 
     $('.btn-list').on('click', function () {
-        $('.product__items-list').addClass('list')
-        $('.product-page__items').addClass('grid')
+        $('.product__items-list, .product-page__items').addClass('list')
         $('.btn-list').addClass('active')
         $('.btn-grid').removeClass('active')
     });
     $('.btn-grid').on('click', function () {
-        $('.product__items-list').removeClass('list')
-        $('.product-page__items').removeClass('grid')
+        $('.product__items-list, .product-page__items').removeClass('list')
         $('.btn-grid').addClass('active')
         $('.btn-list').removeClass('active')
     });
