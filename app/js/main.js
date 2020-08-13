@@ -39,16 +39,23 @@ $(function(){
         $('.btn-list').removeClass('active')
     });
 
-    $('.posts__tabs .tab, settings__tabs .tab').on('click', function (event) {
+    $('.posts__tabs .tab, .product-one__tabs .tab').on('click', function (event) {
         var id = $(this).attr('data-id');
-        $('.posts__tabs, .settings__tabs').find('.tab-item').removeClass('active-tab').hide();
-        $('.posts__tabs .tabs, .settings__tabs .tabs').find('.tab').removeClass('active');
+        $('.posts__tabs, .product-one__tabs').find('.tab-item').removeClass('active-tab').hide();
+        $('.posts__tabs .tabs, .product-one__tabs .tabs').find('.tab').removeClass('active');
         $(this).addClass('active');
         $('#' + id).addClass('active-tab').fadeIn();
         return false;
     });
 
-
+    $('.box__check2').on('click', function () {
+        $('.box__check1').removeClass('active')
+        $('.box__check2').addClass('active')
+    });
+    $('.box__check1').on('click', function () {
+        $('.box__check2').removeClass('active')
+        $('.box__check1').addClass('active')
+    });
 
 
     var mixer = mixitup('.products__inner-box');
